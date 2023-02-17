@@ -1,6 +1,6 @@
 {
   "name": "f-jethwa-my-favourite-cars",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "generatecomponent": "ng generate component",
