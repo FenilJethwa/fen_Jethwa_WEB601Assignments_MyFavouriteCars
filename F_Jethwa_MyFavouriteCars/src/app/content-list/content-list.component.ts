@@ -23,7 +23,7 @@ export class ContentListComponent {
       description: 'This is the second content',
       creator: 'Jane Doe',
       imgURL: 'https://example.com/image2.jpg',
-      type: 'article',
+      type: 'album',
       tags: ['tag3', 'tag4']
     },
     {
@@ -61,6 +61,14 @@ export class ContentListComponent {
       imgURL: 'https://example.com/image6.jpg',
       type: 'article',
       tags: ['tag2', 'tag4']
+    },
+    {
+      id: 7,
+      title: 'Sixth Content',
+      description: 'This is the sixth content',
+      creator: 'Emily Johnson',
+      imgURL: 'https://example.com/image6.jpg',
+      tags: ['tag5', 'tag']
     },
   ];
 }
