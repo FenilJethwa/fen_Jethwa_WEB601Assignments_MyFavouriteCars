@@ -1,1 +1,15 @@
-<p>content-card works!</p>
+<div class="content-card" [class.first]="first" (click)="displayDetails()">
+  <h2>{{ content.title }}</h2>
+  <div class="content-image" *ngIf="content.imgURL">
+    <img [src]="content.imgURL" alt="{{ content.title }}">
+  </div>
+  <div class="content-description">{{ content.description }}</div>
+  <div class="content-creator">{{ content.creator }}</div>
+  <div class="content-type" *ngIf="content.type">Type: {{ content.type }}</div>
+  <div class="content-tags" *ngIf="content.tags && content.tags.length > 0">
+    Tags:
+    <ul>
+      <li *ngFor="let tag of content.tags">{{ tag }}</li>
+    </ul>
+  </div>
+</div>
