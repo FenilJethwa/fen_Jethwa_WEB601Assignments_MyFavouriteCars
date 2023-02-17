@@ -2,3 +2,20 @@
 <div *ngFor="let content of contents | slice:0:5">
   <app-content-card [content]="content"></app-content-card>
 </div>
+<ng-container *ngIf="(contents | contentTypeFilter).length > 0; else noContent">
+  <h2>Content without Type</h2>
+  <div class="content-list">
+    <app-content-card *ngFor="let content of contents | contentTypeFilter" [content]="content" [borderColor]="'black'"></app-content-card>
+  </div>
+  <h2>Content of Type 'type1'</h2>
+  <div class="content-list">
+    <app-content-card *ngFor="let content of contents | contentTypeFilter:'type1'" [content]="content" [borderColor]="'red'"></app-content-card>
+  </div>
+  <h2>Content of Type 'type2'</h2>
+  <div class="content-list">
+    <app-content-card *ngFor="let content of contents | contentTypeFilter:'type2'" [content]="content" [borderColor]="'green'"></app-content-card>
+  </div>
+</ng-container>
+<ng-template #noContent>
+  <p>No content found.</p>
+</ng-template>

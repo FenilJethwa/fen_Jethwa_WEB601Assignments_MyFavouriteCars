@@ -1,1 +1,9 @@
 <app-content-list></app-content-list>
+<div>
+  <label for="search-title">Search by Title:</label>
+  <input type="text" id="search-title" [(ngModel)]="searchTitle">
+  <button (click)="searchForContent()">Search</button>
+  <div *ngIf="searchResult">
+    <p [ngStyle]="{color: searchResult ? 'green' : 'red'}">{{ searchResultMessage }}</p>
+  </div>
+</div>
