@@ -1,5 +1,5 @@
 
-import { Content } from '../content-interface';
+import { Content } from "./content-interface";
 
 
 export class ContentList {
